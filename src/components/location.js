@@ -14,7 +14,7 @@ export default function Location() {
   function getLocation(searchValue) {
     axios
       .get(
-        `http://api.weatherapi.com/v1/search.json?key=${process.env.weather_api}&q=${searchValue}`
+        `https://api.weatherapi.com/v1/search.json?key=${process.env.weather_api}&q=${searchValue}`
       )
       .then((resp) => {
         updateLocationChoice(resp.data);
@@ -70,7 +70,7 @@ export default function Location() {
     //clear get location .. and input .. clear to do
     axios
       .get(
-        `http://api.weatherapi.com/v1/current.json?key=${process.env.weather_api}&q=${place}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=${process.env.weather_api}&q=${place}&aqi=no`
       )
       .then(({ data }) => {
         updateLocation(data.location);
