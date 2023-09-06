@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 const env =
-  process.env.NODE_ENV === "production"
+  process.env.NODE_ENV === "development"
     ? new webpack.EnvironmentPlugin({ ...process.env })
     : new Dotenv();
 
@@ -50,5 +50,6 @@ module.exports = (webpackEnv) => {
         inject: "body",
       }),
     ],
+    cache: true
   };
 };

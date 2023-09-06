@@ -42,15 +42,15 @@ export default function Location() {
 
   function timeToBbq(windSpeed, uv, rain) {
     if (windSpeed >= "20") {
-      updateWindWeather("No");
+      updateWindWeather("No 😭");
     } else {
-      updateWindWeather("Yes");
+      updateWindWeather("Yes 🍗");
     }
 
     if (uv >= "3") {
       updateUvWeather("");
     } else {
-      updateUvWeather("Don't forget suncream");
+      updateUvWeather("Don't forget suncream ☀️");
     }
 
     if (rain >= "1") {
@@ -104,14 +104,16 @@ export default function Location() {
           );
         })}
       </ul>
-      <h2 className="location-name">{location.name}</h2>
-      <h3>{windWeather}</h3>
-      <div className="weather-info">
-        <p className={isActive ? "weather-temperature" : null}>
-          Temperature: {weather.feelslike_c}
-        </p>
-        <p>{uvWeather}</p>
-        <p>{rainWeather}</p>
+      <div className="weather-result">
+        <h2 className="location-name">{location.name}</h2>
+        <h3>{windWeather}</h3>
+        <div className="weather-info">
+          <p className={isActive ? "weather-temperature" : null}>
+            🌡 {weather.feelslike_c}
+          </p>
+          <p>{uvWeather}</p>
+          <p>{rainWeather}</p>
+        </div>
       </div>
     </section>
   );

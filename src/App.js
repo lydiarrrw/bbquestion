@@ -10,10 +10,14 @@ import "./styles/style.scss";
 
 const App = () => {
   return (
-    <main>
-      <h1>Is it BBQ weather?</h1>
-      <Location />
-    </main>
+    <div className="bbq-container">
+      <main>
+        <h1>Is it BBQ weather?</h1>
+        <Location />
+      </main>
+      <small>Weather info from <a href="https://www.weatherapi.com/">Weather API</a></small>
+    </div>
+
   );
 };
 export default App;
