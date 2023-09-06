@@ -13,5 +13,6 @@ Top tips:
 Things I can add:
 * C/F toggle
 * Fave locations
+* Mobile view isn't quite right
 * Check country and last updated as some results are a bit weird.
 * ...
